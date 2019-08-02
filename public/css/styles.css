@@ -8,7 +8,7 @@ body {
 
 /* Source: https://startbootstrap.com/snippets/full-slider/ */
 .carousel-item {
-    height: 75vh;
+    height: 80vh;
     min-height: 350px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -58,4 +58,36 @@ form .submit {
     letter-spacing: 2px;
     height: 50px;
     margin-top: 20px;
+}
+
+#start-btn, a:visited, a:hover{
+    text-decoration: none;
+}
+
+#start-btn {
+    font-size: 25px;
+}
+
+
+.resources-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.resources-links{
+    padding: 20px;
+    margin-left: 40px;
+  
+
+}
+
+a.link {
+    text-decoration: none;
+    color: gray;
+}
+
+a.link:hover {
+    color: black;
 }
