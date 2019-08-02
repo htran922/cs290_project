@@ -1,0 +1,61 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Source: https://startbootstrap.com/snippets/full-slider/ */
+.carousel-item {
+    height: 75vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Navbar hamburger icon */
+.navbar.navbar-8 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=1729B0');
+}
+
+
+.contact-title, .resources-title, .log-title{
+    text-align: center;
+    margin-top: 5vh;
+    text-transform: uppercase;
+}
+
+.contact-form form {
+    margin-top: 50px;
+}
+
+.form-control {
+    width: 50%;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+#contact-form input {
+    height: 45px;
+}
+
+form .submit {
+    background-color: gray;
+    border-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+}

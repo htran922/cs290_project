@@ -1,0 +1,18 @@
+{{> navBar}}
+
+<div class="contact-container">
+    <div class="contact-title">
+        <h1>Contact Us</h1>
+        <h3>We want to hear from you!</h3>
+    </div>
+    <div class="contact-form">
+        <form id="contact-form"
+            action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php"
+            method="POST">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+            <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+            <input type="submit" class="form-control submit" value="Send">
+        </form>
+    </div>
+</div>
