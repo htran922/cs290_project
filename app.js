@@ -11,7 +11,7 @@ const handlebars = require('express-handlebars').create({
     defaultLayout: 'main'
 });
 const bodyParser = require('body-parser');
-const PORT = 3000;
+const PORT = 30890;
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -51,5 +51,5 @@ app.use(function (err, req, res, next) {
 
 // prints a log once the server starts listening
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}; press Ctrl-C to terminate.`)
+    console.log(`Server listening on http://flip2.engr.oregonstate.edu:${PORT}; press Ctrl-C to terminate.`)
 })
