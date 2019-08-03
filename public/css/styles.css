@@ -62,19 +62,13 @@ form .submit {
 
 #start-btn, a:visited, a:hover{
     text-decoration: none;
+    color: black;
 }
-
-#start-btn {
-    font-size: 25px;
-}
-
 
 .resources-content {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    
-    
 }
 
 .resources-links{
@@ -96,27 +90,23 @@ a.link:hover {
 .scrollbar {
     margin-left: 30px;
 	float: left;
-	/* height: 350px;
-	width: 40%; */
 	background-color: #F5F5F5;
 	overflow-y: scroll;
     margin-bottom: 25px;
     border: solid darkgray 1px;
 }
 
-#links-scroll::-webkit-scrollbar-track
-{
+#links-scroll::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
 }
 
 .info-container {
-    height: 350px;
+    height: 400px;
 	width: 40%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .dl-content {
@@ -125,4 +115,21 @@ a.link:hover {
 
 #dl-text {
     font-size: 20px;
+}
+
+.log-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    
+}
+
+.log-content {
+    margin-top: 20px;
+}
+
+.log-form {
+    margin: 0 auto;
+    border: solid lightgray 1px;
+    padding: 10px;
 }

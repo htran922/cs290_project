@@ -3,17 +3,21 @@
  * Course: CS290
  * Date: August 1, 2019
  * Description: final project
-************************************************************/
+ ************************************************************/
 const express = require('express');
 const path = require('path');
 const app = express();
-const handlebars = require('express-handlebars').create({defaultLayout: 'main'});
+const handlebars = require('express-handlebars').create({
+    defaultLayout: 'main'
+});
 const bodyParser = require('body-parser');
 const PORT = 3000;
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(bodyParser.json());
 app.use("/public", express.static(path.join(__dirname, 'public')));
 
