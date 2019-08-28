@@ -1,55 +1,68 @@
 {{> navBar}}
-
 <div class="log-container">
-    <div class="log-title">
-        <h1>Training Log</h1>
+    <div class="form-title">
+        <h1>Workout Tracker</h1>
     </div>
-    <div class="log-form">
-        <form method="POST" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php">
+    <div class="log-input">
+        <form id="addForm">
             <fieldset>
-                <legend>Add Workout</legend>
-                <label>Date: 
-                    <input type="date" name="date" id="date">
-                </label>
-                <label>Exercise: 
-                    <input type="text" size="30" name="exercise" id="exercise">
-                </label>
-                <label>Weight (lb):
-                    <input type="number" min="0" max="1000" name="weight" id="weight">
-                </label>
-                <label>Sets:
-                    <input type="number" min="1" max="100" name="numSets" id="numSets">
+                <legend>Add Entry</legend>
+                <label>Name:
+                    <input type="text" size="30" name="name" id="name">
                 </label>
                 <label>Reps:
-                    <input type="number" min="1" max="100" name="numReps" id="numReps">
+                    <input type="number" min="1" max="100" name="reps" id="reps">
                 </label>
-                <button class="btn btn-dark btn-sm" type="submit">Add</button>
+                <label>Weight:
+                    <input type="number" min="0" max="1000" name="weight" id="weight">
+                </label>
+                <label>Date:
+                    <input type="date" name="date" id="date">
+                </label>
+                <label>Unit:
+                    <input name="unit" type="checkbox" value="1" checked> lb
+
+                </label>
+                <button class="btn btn-success" id="addButton" type="submit" name="Add Workout">Add</button>
             </fieldset>
         </form>
     </div>
-
-    <div class="log-content">
-        <table class="table table-dark">
-            <thead>
+    <br>
+    <div class="form-output">
+        <h3>Your Workout Log</h3>
+        <table id="outputTable" class="table .table-bordered">
+            <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Exercise</th>
-                    <th scope="col">Weight (lb)</th>
-                    <th scope="col">Sets</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Reps</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                {{#each workoutList}}
-                <tr>
-                    <td>{{this.date}}</td>
-                    <td>{{this.exercise}}</td>
-                    <td>{{this.weight}}</td>
-                    <td>{{this.numSets}}</td>
-                    <td>{{this.numReps}}</td>
-                </tr>
-                {{/each}}
-            </tbody>
+            {{#each workout}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{reps}}</td>
+                <td>{{weight}}</td>
+                <td>{{date}}</td>
+                <td>{{lbs}}</td>
+
+                <td><a href="/update?id={{id}}"><input class="btn btn-warning" type="button" value="Update"></a></td>
+
+                <!-- JSFiddle example http://jsfiddle.net/GRgMb/ -->
+                <td>
+                    <input class="btn btn-danger" type="button" value="Delete" onclick="deleteEntry({{this.id}})" />
+                    <input type="hidden" id="delete{{id}}" />
+                </td>
+            </tr>
+            {{/each}}
+
         </table>
     </div>
 </div>
+
+
+<script src="public/js/script.js"></script>
