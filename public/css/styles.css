@@ -126,3 +126,9 @@ a.link:hover {
     border: solid lightgray 1px;
     padding: 2%;
 }
+
+.gym-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2%;
+}

@@ -198,6 +198,10 @@ app.get('/reset-table', function (req, res, next) {
     });
 });
 
+app.get('/locate-gym', (req, res) => {
+    res.render('gym');
+});
+
 app.get('/contact', (req, res) => {
     res.render('contact');
 });
